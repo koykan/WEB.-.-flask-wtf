@@ -6,7 +6,12 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index/<title>')
 def index(title='Заготовка'):
-    return render_template('base.html', title=title)
+    params = {
+        'title': title,
+        'heading': 'Миссия Колонизация Марса',
+        'subheading': 'И на Марсе будут яблони цвести!'
+    }
+    return render_template('base.html', **params)
 
 
 if __name__ == '__main__':
