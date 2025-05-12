@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Загрузка фотографии</h2>
+<form method="post" enctype="multipart/form-data" action="{{ url_for('load_photo') }}">
+    <div class="form-group">
+        <label for="photo">Выберите файл</label>
+        <input type="file" class="form-control-file" id="photo" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+{% endblock %}

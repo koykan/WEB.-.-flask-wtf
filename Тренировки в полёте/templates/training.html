@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if prof_type == "engineering" %}
+        <h2>Инженерные тренажеры</h2>
+        <div class="scheme">
+            <img src="{{ url_for('static', filename='img/engineering_scheme.png') }}" alt="Схема инженерных тренажеров">
+            <p>Специальность: {{ profession }}</p>
+        </div>
+    {% else %}
+        <h2>Научные симуляторы</h2>
+        <div class="scheme">
+            <img src="{{ url_for('static', filename='img/science_scheme.png') }}" alt="Схема научных симуляторов">
+            <p>Специальность: {{ profession }}</p>
+        </div>
+    {% endif %}
+{% endblock %}
